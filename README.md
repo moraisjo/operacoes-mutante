@@ -25,3 +25,58 @@ Sua missão é atuar como um engenheiro de qualidade para encontrar essas fraque
     - Rode o Stryker novamente e verifique se sua pontuação de mutação aumentou, idealmente para mais de 95%.
 
 Siga as instruções do documento do trabalho para a entrega final. Boa sorte!
+
+## Sessão de ferramentas e versões utilizadas
+
+Para a elaboração deste trabalho, foi utilizado o seguinte conjunto de ferramentas e versões no ambiente local:
+
+- Node.js: 22.13.0
+- npm: 11.11.0
+- Python: 3.12.3
+- Matplotlib: 3.11.2
+- Jest: 29.7.0
+- Babel Jest: 29.7.0
+- @babel/preset-env: 7.23.2
+- StrykerJS Core: 10.0.0
+- @stryker-mutator/jest-runner: 10.0.0
+
+Essas versões foram empregadas para executar a suíte de testes, gerar relatórios de cobertura, aplicar mutações com StrykerJS e produzir os gráficos de apoio ao relatório final.
+
+## Árvore de diretórios do projeto
+
+```text
+operacoes-mutante/
+├── .git/
+├── .gitignore
+├── .stryker-tmp/
+├── .venv/
+├── README.md
+├── assets/
+│   ├── cobertura-inicial.svg
+│   ├── mutacao-comparativa.svg
+│   └── status-mutantes.svg
+├── coverage/
+│   ├── clover.xml
+│   ├── coverage-final.json
+│   ├── lcov.info
+│   └── lcov-report/
+├── docs/
+│   └── RELATORIO.md
+├── node_modules/
+├── package-lock.json
+├── package.json
+├── reports/
+│   └── mutation/
+│       └── mutation.html
+├── requirements.txt
+├── scripts/
+│   └── gerar_graficos.py
+├── src/
+│   └── operacoes.js
+├── stryker.config.json
+├── test/
+│   └── operacoes.test.js
+└── .
+```
+
+> Observação: o diretório `node_modules/` e os arquivos gerados em `coverage/`, `assets/` e `reports/` foram produzidos durante a execução do ambiente, sendo parte do processo de validação e documentação do laboratório.

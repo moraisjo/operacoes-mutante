@@ -27,7 +27,7 @@ A tabela a seguir apresenta os seguintes resultados: `Statements` representa a p
 
 *Tabela 1. Cobertura inicial do código. A maior parte das linhas e funções foi executada, mas a baixa taxa de branches revela caminhos condicionais ainda pouco explorados.*
 
-![Cobertura inicial](assets/cobertura-inicial.svg)
+![Cobertura inicial](../assets/cobertura-inicial.svg)
 
 *Figura 1. Distribuição da cobertura inicial por categoria de código. O gráfico reforça que a execução do código foi ampla, mas insuficiente para garantir a qualidade das verificações.*
 
@@ -57,7 +57,7 @@ Os 44 mutantes sobreviventes indicaram que alteracoes no comportamento do codigo
 
 Os mutantes abaixo foram selecionados entre os sobreviventes da primeira execucao por representarem tres fraquezas diferentes: ausencia de teste para um caminho condicional, assercao de excecao pouco especifica e entrada numerica incapaz de distinguir formulas aritmeticas.
 
-**Evidencia visual:** o relatorio HTML completo esta disponivel em [reports/mutation/mutation.html](reports/mutation/mutation.html). Nele, os mutantes aparecem com o status `Survived` e com a localizacao correspondente no arquivo `src/operacoes.js`. Para a versao PDF, devem ser inseridas capturas de tela das tres entradas selecionadas nesse relatorio.
+**Evidencia visual:** o relatorio HTML completo esta disponivel em [../reports/mutation/mutation.html](../reports/mutation/mutation.html). Nele, os mutantes aparecem com o status `Survived` e com a localizacao correspondente no arquivo `src/operacoes.js`. Para a versao PDF, devem ser inseridas capturas de tela das tres entradas selecionadas nesse relatorio.
 
 ### 3.1 ConditionalExpression em `mediaArray`
 
@@ -194,11 +194,11 @@ Depois da inclusao dos novos testes, a analise apresentou os seguintes resultado
 
 *Tabela 3. Comparação dos resultados antes e depois das melhorias. A análise mostra aumento do score e diminuição dos mutantes sobreviventes, confirmando a eficácia dos testes adicionados.*
 
-![Comparacao de mutacao](assets/mutacao-comparativa.svg)
+![Comparacao de mutacao](../assets/mutacao-comparativa.svg)
 
 *Figura 2. Comparação entre os cenários inicial e final da análise de mutação. As barras evidenciam ganho de eficácia após a introdução de casos de teste mais específicos.*
 
-![Status dos mutantes](assets/status-mutantes.svg)
+![Status dos mutantes](../assets/status-mutantes.svg)
 
 *Figura 3. Distribuição dos mutantes por categoria antes e depois da melhoria. A redução de sobreviventes indica que os novos testes melhoraram a sensibilidade da suíte.*
 
