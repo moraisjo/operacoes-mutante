@@ -12,30 +12,42 @@ Este trabalho avaliou a eficacia de uma suite de testes JavaScript utilizando Je
 
 O teste de mutacao introduz alteracoes controladas no codigo para verificar se os testes conseguem detectar mudancas no comportamento esperado.
 
-A cobertura inicial apresentou os seguintes resultados. **Legenda:** `Statements` representa a proporcao de instrucoes executadas; `Branches`, a proporcao de caminhos condicionais executados; `Functions`, a proporcao de funcoes chamadas; e `Lines`, a proporcao de linhas executadas. Esses indicadores mostram quanto do codigo foi exercitado, mas nao avaliam a qualidade das assercoes.
+A tabela a seguir apresenta os seguintes resultados: `Statements` representa a proporcao de instrucoes executadas; `Branches`, a proporcao de caminhos condicionais executados; `Functions`, a proporcao de funcoes chamadas; e `Lines`, a proporcao de linhas executadas. Esses indicadores mostram quanto do codigo foi exercitado, mas nao avaliam a qualidade das assercoes.
 
-| Metrica | Resultado |
-| --- | ---: |
-| Statements | 85,41% |
-| Branches | 58,82% |
-| Functions | 100% |
-| Lines | 98,64% |
+<div align="center">
 
-Figura 1. Cobertura inicial do codigo. Os indicadores mostram que o conjunto de testes exercitou grande parte das linhas e funcoes, mas ainda deixou lacunas relevantes nos caminhos condicionais.
+| Metrica    | Resultado |
+| ---------- | --------: |
+| Statements |    85,41% |
+| Branches   |    58,82% |
+| Functions  |      100% |
+| Lines      |    98,64% |
+
+</div>
+
+*Tabela 1. Cobertura inicial do código. A maior parte das linhas e funções foi executada, mas a baixa taxa de branches revela caminhos condicionais ainda pouco explorados.*
 
 ![Cobertura inicial](assets/cobertura-inicial.svg)
 
-A analise inicial de mutacao apresentou os resultados abaixo. **Legenda:** `Mutation score` indica a proporcao de mutantes efetivamente detectados; `Mutantes cobertos` indica os mutantes alcancados por pelo menos um teste; `Mutantes mortos` sao aqueles detectados; `Mutantes sobreviventes` nao foram detectados; `timeout` indica execucao excedida; `sem cobertura` indica que nenhum teste alcancou o trecho; e `Erros` representa falhas de execucao do processo de mutacao.
+*Figura 1. Distribuição da cobertura inicial por categoria de código. O gráfico reforça que a execução do código foi ampla, mas insuficiente para garantir a qualidade das verificações.*
 
-| Metrica | Resultado |
-| --- | ---: |
-| Mutation score | 73,71% |
-| Mutantes cobertos | 78,11% |
-| Mutantes mortos | 154 |
-| Mutantes sobreviventes | 44 |
-| Mutantes com timeout | 3 |
-| Mutantes sem cobertura | 12 |
-| Erros | 0 |
+A analise inicial de mutacao apresentou os resultados na tabela abaixo: `Mutation score` indica a proporcao de mutantes efetivamente detectados; `Mutantes cobertos` indica os mutantes alcancados por pelo menos um teste; `Mutantes mortos` sao aqueles detectados; `Mutantes sobreviventes` nao foram detectados; `timeout` indica execucao excedida; `sem cobertura` indica que nenhum teste alcancou o trecho; e `Erros` representa falhas de execucao do processo de mutacao.
+
+<div align="center">
+
+| Metrica                | Resultado |
+| ---------------------- | --------: |
+| Mutation score         |    73,71% |
+| Mutantes cobertos      |    78,11% |
+| Mutantes mortos        |       154 |
+| Mutantes sobreviventes |        44 |
+| Mutantes com timeout   |         3 |
+| Mutantes sem cobertura |        12 |
+| Erros                  |         0 |
+
+</div>
+
+*Tabela 2. Resultado inicial da análise de mutação. O score indica que parte dos mutantes foi detectada, mas a taxa de sobrevivência ainda mostra fragilidades relevantes na suíte.*
 
 A diferenca demonstra que cobertura de codigo nao e suficiente para avaliar a qualidade de uma suite de testes. A cobertura mostra que instrucoes, funcoes ou linhas foram executadas, mas nao garante que os resultados tenham sido validados corretamente.
 
@@ -164,25 +176,31 @@ Alteracoes nos operadores de multiplicacao ou divisao produzem um resultado dife
 
 ## 4. Resultados finais
 
-Depois da inclusao dos novos testes, a analise apresentou os seguintes resultados. **Legenda:** a coluna `Inicial` mostra a situacao antes das melhorias; `Final`, a situacao depois dos novos testes; e `Variacao`, a diferenca entre os dois resultados. Valores positivos indicam aumento, enquanto valores negativos indicam reducao. `p.p.` significa pontos percentuais.
+Depois da inclusao dos novos testes, a analise apresentou os seguintes resultados: a coluna `Inicial` mostra a situacao antes das melhorias; `Final`, a situacao depois dos novos testes; e `Variacao`, a diferenca entre os dois resultados. Valores positivos indicam aumento, enquanto valores negativos indicam reducao. `p.p.` significa pontos percentuais.
 
-| Metrica | Inicial | Final | Variacao |
-| --- | ---: | ---: | ---: |
-| Mutation score | 73,71% | 75,59% | +1,88 p.p. |
-| Mutantes cobertos | 78,11% | 80,10% | +1,99 p.p. |
-| Mutantes mortos | 154 | 158 | +4 |
-| Mutantes sobreviventes | 44 | 40 | -4 |
-| Mutantes com timeout | 3 | 3 | 0 |
-| Mutantes sem cobertura | 12 | 12 | 0 |
-| Erros | 0 | 0 | 0 |
+<div align="center">
 
-Figura 2. Comparacao entre os cenarios inicial e final da analise de mutacao. A barra verde representa o resultado apos os testes melhorados, enquanto a vermelha mostra o baseline original.
+| Metrica                | Inicial |  Final |   Variacao |
+| ---------------------- | ------: | -----: | ---------: |
+| Mutation score         |  73,71% | 75,59% | +1,88 p.p. |
+| Mutantes cobertos      |  78,11% | 80,10% | +1,99 p.p. |
+| Mutantes mortos        |     154 |    158 |         +4 |
+| Mutantes sobreviventes |      44 |     40 |         -4 |
+| Mutantes com timeout   |       3 |      3 |          0 |
+| Mutantes sem cobertura |      12 |     12 |          0 |
+| Erros                  |       0 |      0 |          0 |
+
+</div>
+
+*Tabela 3. Comparação dos resultados antes e depois das melhorias. A análise mostra aumento do score e diminuição dos mutantes sobreviventes, confirmando a eficácia dos testes adicionados.*
 
 ![Comparacao de mutacao](assets/mutacao-comparativa.svg)
 
-Figura 3. Status dos mutantes antes e depois da melhoria. A queda em mutantes sobreviventes confirma que os novos testes fortaleceram a capacidade de detectar alteracoes de comportamento.
+*Figura 2. Comparação entre os cenários inicial e final da análise de mutação. As barras evidenciam ganho de eficácia após a introdução de casos de teste mais específicos.*
 
 ![Status dos mutantes](assets/status-mutantes.svg)
+
+*Figura 3. Distribuição dos mutantes por categoria antes e depois da melhoria. A redução de sobreviventes indica que os novos testes melhoraram a sensibilidade da suíte.*
 
 A pontuacao de mutacao aumentou de **73,71% para 75,59%**, uma melhoria de **1,88 pontos percentuais**. O numero de mutantes mortos aumentou de **154 para 158**, enquanto os sobreviventes diminuiram de **44 para 40**.
 
