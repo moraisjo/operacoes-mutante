@@ -21,6 +21,10 @@ A cobertura inicial apresentou os seguintes resultados. **Legenda:** `Statements
 | Functions | 100% |
 | Lines | 98,64% |
 
+Figura 1. Cobertura inicial do codigo. Os indicadores mostram que o conjunto de testes exercitou grande parte das linhas e funcoes, mas ainda deixou lacunas relevantes nos caminhos condicionais.
+
+![Cobertura inicial](assets/cobertura-inicial.svg)
+
 A analise inicial de mutacao apresentou os resultados abaixo. **Legenda:** `Mutation score` indica a proporcao de mutantes efetivamente detectados; `Mutantes cobertos` indica os mutantes alcancados por pelo menos um teste; `Mutantes mortos` sao aqueles detectados; `Mutantes sobreviventes` nao foram detectados; `timeout` indica execucao excedida; `sem cobertura` indica que nenhum teste alcancou o trecho; e `Erros` representa falhas de execucao do processo de mutacao.
 
 | Metrica | Resultado |
@@ -171,6 +175,14 @@ Depois da inclusao dos novos testes, a analise apresentou os seguintes resultado
 | Mutantes com timeout | 3 | 3 | 0 |
 | Mutantes sem cobertura | 12 | 12 | 0 |
 | Erros | 0 | 0 | 0 |
+
+Figura 2. Comparacao entre os cenarios inicial e final da analise de mutacao. A barra verde representa o resultado apos os testes melhorados, enquanto a vermelha mostra o baseline original.
+
+![Comparacao de mutacao](assets/mutacao-comparativa.svg)
+
+Figura 3. Status dos mutantes antes e depois da melhoria. A queda em mutantes sobreviventes confirma que os novos testes fortaleceram a capacidade de detectar alteracoes de comportamento.
+
+![Status dos mutantes](assets/status-mutantes.svg)
 
 A pontuacao de mutacao aumentou de **73,71% para 75,59%**, uma melhoria de **1,88 pontos percentuais**. O numero de mutantes mortos aumentou de **154 para 158**, enquanto os sobreviventes diminuiram de **44 para 40**.
 
