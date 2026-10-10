@@ -74,3 +74,21 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('49. deve calcular o triplo de um número', () => { expect(triplo(10)).toBe(30); });
   test('50. deve calcular a metade de um número', () => { expect(metade(20)).toBe(10); });
 });
+
+
+
+// === Possíveis melhorias para a suíte de testes ===
+
+test('deve retornar 0 para um array vazio', () => {
+  expect(mediaArray([])).toBe(0);
+});
+
+test('deve informar a mensagem correta ao dividir por zero', () => {
+  expect(() => divisao(5, 0)).toThrow(
+    'Divisão por zero não é permitida.'
+  );
+});
+
+test('deve converter 100 Celsius para 212 Fahrenheit', () => {
+  expect(celsiusParaFahrenheit(100)).toBe(212);
+});
